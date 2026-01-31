@@ -13,6 +13,11 @@ def get_fortune():
     ]
     return random.choice(fortunes)
 
+def get_lucky_numbers():
+    return sorted(random.sample(range(1, 50), 6))
+
 if __name__ == "__main__":
     print("🥠 Fortune Cookie Generator 🥠")
     print(f"\nYour fortune: {get_fortune()}")
+    print(f"Lucky numbers: {', '.join(map(str, get_lucky_numbers()))}")
+
